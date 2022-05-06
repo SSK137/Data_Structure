@@ -1,19 +1,22 @@
 public class Operations {
-    Node head,tail;
+    Node head;
 
     public void add(int data){
         Node node = new Node(data);
+        node.data=data;
 
         if(head==null){
             head=node;
-            tail=node;
         }
         else {
-            Node node1=head;
-            this.head=node;
-            node.next=node1;
+            Node n=head;
+            while (n.next!=null){
+                n=n.next;
             }
+            n.next=node;
         }
+    }
+
     public void print(){
         Node node=head;
         while (node.next!=null){

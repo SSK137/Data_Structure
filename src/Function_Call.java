@@ -22,6 +22,13 @@ public class Function_Call {
         oprations.InsertInBetween(30);
         System.out.println("\nAfter Adding new Element");
         oprations.print();
-
+    }
+    public void deleteNode(){
+        oprations.pop();
+        oprations.print();
+    }
+    public void deleteLastNode(){
+        oprations.removeLastNode();
+        oprations.print();
     }
 }

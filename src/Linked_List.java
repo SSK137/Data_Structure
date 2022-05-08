@@ -26,6 +26,12 @@ public class Linked_List {
                 case 3:
                     functionCall.InBetween();
                     break;
+                case 4:
+                    functionCall.deleteNode();
+                    break;
+                case 5:
+                    functionCall.deleteLastNode();
+                    break;
                 default:
                     System.out.println("Enter Correct choice");
             }

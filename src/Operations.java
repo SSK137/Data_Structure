@@ -1,5 +1,5 @@
 public class Operations {
-    Node head,tail;
+    public static Node head,tail;
     public int size=0;
 
     public void add(int data){
@@ -67,6 +67,30 @@ public class Operations {
         }
         size++;
     }
+
+    public void pop(){
+        if (head != null){
+            Node temp = head;
+            head = head.next;
+        }
+    }
+    static Node removeLastNode()
+    {
+        if (head == null)
+            return null;
+        if (head.next == null) {
+            return null;
+        }
+
+        Node second_last = head;
+        while (second_last.next.next != null)
+            second_last = second_last.next;
+
+        second_last.next = null;
+
+        return head;
+    }
+
     public void print() {
         Node temp = head;
         if (head == null) {

@@ -6,4 +6,7 @@ public class Node {
         this.data=data;
         this.next=null;
     }
+    public String toString() {
+        return ("Node" +  "Data" + data + "Address"+ next );
+    }
 }
